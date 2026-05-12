@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TEMPIST SYSTEMS INC. — Brand Identity & Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ops:#0A0B0E;
+  --green:#00FF41;
+  --white:#E8E4DC;
+  --red:#CC1100;
+  --steel:#4A5568;
+  --surface:#0f1114;
+  --border:#1e2128;
+}
+
+@page{
+  size: 297mm 167.06mm;
+  margin: 0;
+}
+
+html,body{
+  width: 297mm;
+  background: var(--ops);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ── SLIDE BASE ── */
+.slide{
+  width: 297mm;
+  height: 167.06mm;
+  background: var(--ops);
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  page-break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.slide:last-child{ page-break-after: auto; }
+
+/* ── GRID OVERLAY ── */
+.slide::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(0,255,65,0.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,65,0.04) 1px,transparent 1px);
+  background-size:24px 24px;
+  pointer-events:none;
+  z-index:0;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* ── TOP BAR ── */
+.top-bar{
+  position:absolute;
+  top:0;left:0;right:0;
+  height:7mm;
+  background:rgba(15,17,20,0.95);
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8mm;
+  z-index:10;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.top-bar-brand{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:5.5pt;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--white);
+}
+.top-bar-meta{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5pt;
+  letter-spacing:0.12em;
+  color:var(--steel);
+  text-transform:uppercase;
+}
+.top-bar-class{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5pt;
+  color:var(--red);
+  letter-spacing:0.15em;
+  border:0.5px solid var(--red);
+  padding:1px 4px;
+}
+
+/* ── BOTTOM BAR ── */
+.bot-bar{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  height:5.5mm;
+  border-top:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8mm;
+  z-index:10;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+.bot-bar-left{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:4.5pt;
+  color:var(--steel);
+  letter-spacing:0.1em;
+}
+.bot-bar-right{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:4.5pt;
+  color:var(--steel);
+  letter-spacing:0.08em;
+}
+.bot-bar-right span{ color:var(--green); }
+
+/* ── SLIDE CONTENT AREA ── */
+.content{
+  position:absolute;
+  top:7mm;bottom:5.5mm;left:0;right:0;
+  z-index:5;
+  padding:7mm 10mm 6mm;
+  display:flex;
+  flex-direction:column;
+}
+
+/* ── CORNER BRACKETS ── */
+.bracket-tl,.bracket-br{
+  position:absolute;
+  width:10mm;height:10mm;
+  z-index:20;
+}
+.bracket-tl{
+  top:8mm;left:8mm;
+  border-top:1px solid var(--green);
+  border-left:1px solid var(--green);
+}
+.bracket-br{
+  bottom:7mm;right:8mm;
+  border-bottom:1px solid var(--green);
+  border-right:1px solid var(--green);
+}
+
+/* ── TYPOGRAPHY ── */
+.slide-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5pt;
+  letter-spacing:0.25em;
+  color:var(--green);
+  text-transform:uppercase;
+  margin-bottom:3mm;
+}
+h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:28pt;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--white);
+  line-height:1.05;
+}
+h2{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:16pt;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--white);
+  line-height:1.1;
+  margin-bottom:4mm;
+}
+h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:9pt;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin-bottom:2mm;
+}
+h4{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:6.5pt;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--steel);
+  margin-bottom:1.5mm;
+}
+p{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:7.5pt;
+  line-height:1.65;
+  color:rgba(232,228,220,0.78);
+}
+.mono{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:7pt;
+  color:var(--green);
+  letter-spacing:0.06em;
+}
+.rule{
+  height:1px;
+  background:var(--green);
+  margin:3mm 0;
+  width:100%;
+}
+.rule-dim{
+  height:1px;
+  background:var(--border);
+  margin:3mm 0;
+}
+
+/* ═══════════════════════════════════
+   SLIDE TYPES
+═══════════════════════════════════ */
+
+/* COVER */
+.slide-cover .content{
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:10mm;
+}
+.cover-doc{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  letter-spacing:0.22em;
+  color:var(--steel);
+  text-transform:uppercase;
+  margin-bottom:6mm;
+}
+.cover-wordmark{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:34pt;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--white);
+  line-height:1;
+  margin-bottom:3mm;
+}
+.cover-rule{
+  width:120mm;height:1px;
+  background:var(--green);
+  margin:0 auto 3mm;
+}
+.cover-sub{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:300;
+  font-size:10pt;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:var(--white);
+  opacity:0.75;
+  margin-bottom:8mm;
+}
+.cover-stamp{
+  display:inline-block;
+  border:1px solid var(--red);
+  font-family:'IBM Plex Mono',monospace;
+  font-size:6pt;
+  letter-spacing:0.2em;
+  color:var(--red);
+  padding:3px 10px;
+  margin-bottom:6mm;
+}
+.cover-meta-row{
+  display:flex;
+  gap:6mm;
+  justify-content:center;
+}
+.cover-meta-item{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  color:var(--steel);
+  letter-spacing:0.1em;
+  background:rgba(0,255,65,0.04);
+  border:0.5px solid rgba(0,255,65,0.15);
+  padding:2px 6px;
+}
+.cover-meta-item span{ color:var(--green); }
+
+/* CHAPTER DIVIDER */
+.slide-chapter{
+  background:var(--ops);
+}
+.slide-chapter .content{
+  justify-content:center;
+  padding-left:14mm;
+}
+.chapter-accent{
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:2mm;
+  background:var(--green);
+  z-index:20;
+}
+.chapter-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:6pt;
+  letter-spacing:0.25em;
+  color:var(--green);
+  text-transform:uppercase;
+  margin-bottom:4mm;
+}
+.chapter-num-large{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:72pt;
+  letter-spacing:0.06em;
+  color:rgba(232,228,220,0.05);
+  line-height:1;
+  position:absolute;
+  right:8mm;
+  bottom:10mm;
+  letter-spacing:0.04em;
+}
+.chapter-title-large{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:30pt;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--white);
+  line-height:1.05;
+  margin-bottom:3mm;
+}
+.chapter-desc{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:7.5pt;
+  color:rgba(232,228,220,0.5);
+  max-width:120mm;
+  line-height:1.6;
+}
+
+/* TWO-COL */
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6mm;
+  flex:1;
+}
+.three-col{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:5mm;
+  flex:1;
+}
+
+/* CARD */
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:4mm 5mm;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:'';
+  position:absolute;top:0;left:0;
+  width:0.5mm;height:100%;
+  background:var(--green);
+}
+.card-label{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5pt;
+  letter-spacing:0.22em;
+  color:var(--green);
+  text-transform:uppercase;
+  margin-bottom:1.5mm;
+}
+.card-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:8pt;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:2mm;
+}
+.card-body{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:6.5pt;
+  line-height:1.6;
+  color:rgba(232,228,220,0.65);
+}
+
+/* SWATCH */
+.swatch{
+  border:0.5px solid var(--border);
+  overflow:hidden;
+}
+.swatch-color{ height:14mm;width:100%; print-color-adjust:exact; -webkit-print-color-adjust:exact; }
+.swatch-info{ padding:2.5mm 3mm; background:var(--surface); }
+.swatch-name{ font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:6.5pt;letter-spacing:0.08em;text-transform:uppercase;color:var(--white); }
+.swatch-hex{ font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--green); }
+.swatch-role{ font-family:'IBM Plex Mono',monospace;font-size:5pt;color:var(--steel);text-transform:uppercase;letter-spacing:0.06em;margin-top:1mm; }
+
+/* STATEMENT BOX */
+.stmt{
+  border-left:2px solid var(--green);
+  padding:4mm 6mm;
+  margin:3mm 0;
+  background:rgba(0,255,65,0.03);
+}
+.stmt p{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:10pt;
+  font-weight:500;
+  color:var(--white);
+  line-height:1.4;
+}
+
+/* BRACKET BOX */
+.bkt{
+  position:relative;
+  padding:4mm 5mm;
+  margin:2mm 0;
+}
+.bkt::before{
+  content:'';position:absolute;top:0;left:0;
+  width:6mm;height:6mm;
+  border-top:1px solid var(--green);border-left:1px solid var(--green);
+}
+.bkt::after{
+  content:'';position:absolute;bottom:0;right:0;
+  width:6mm;height:6mm;
+  border-bottom:1px solid var(--green);border-right:1px solid var(--green);
+}
+
+/* LIST */
+.check-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:1.5mm;
+}
+.check-list li{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:6.5pt;
+  line-height:1.5;
+  color:rgba(232,228,220,0.75);
+  display:flex;
+  gap:2.5mm;
+  align-items:flex-start;
+}
+.check-list li::before{
+  content:'//';
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  color:var(--green);
+  flex-shrink:0;
+  margin-top:1px;
+}
+
+/* DO/DONT */
+.dnd{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3mm;
+  flex:1;
+}
+.dnd-col{ display:flex;flex-direction:column;gap:1.5mm; }
+.dnd-header{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  padding:2mm 3mm;
+  margin-bottom:1mm;
+}
+.dnd-header.do{ color:var(--green); border-bottom:1px solid rgba(0,255,65,0.3); }
+.dnd-header.dont{ color:var(--red); border-bottom:1px solid rgba(204,17,0,0.3); }
+.dnd-item{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:6pt;
+  line-height:1.55;
+  padding:2mm 3mm;
+  border:0.5px solid var(--border);
+}
+.dnd-item.do{ color:rgba(232,228,220,0.8); border-left:1.5px solid rgba(0,255,65,0.4); }
+.dnd-item.dont{ color:rgba(204,17,0,0.65); border-left:1.5px solid rgba(204,17,0,0.25); }
+
+/* PROOF ITEM */
+.proof-item{
+  display:flex;
+  gap:4mm;
+  padding:2mm 0;
+  border-bottom:0.5px solid var(--border);
+}
+.proof-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  color:var(--green);
+  white-space:nowrap;
+  margin-top:1px;
+  flex-shrink:0;
+}
+.proof-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:7pt;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:1mm;
+}
+.proof-body{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:6pt;
+  color:rgba(232,228,220,0.6);
+  line-height:1.55;
+}
+
+/* LAW ITEM */
+.law-item{
+  display:flex;
+  gap:4mm;
+  padding:2.5mm 3mm;
+  border:0.5px solid var(--border);
+  margin-bottom:1.5mm;
+  background:var(--surface);
+  position:relative;
+  overflow:hidden;
+}
+.law-item::before{
+  content:'';position:absolute;top:0;left:0;
+  width:1mm;height:100%;
+  background:var(--green);
+}
+.law-num{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:6pt;
+  color:var(--green);
+  white-space:nowrap;
+  font-weight:700;
+  flex-shrink:0;
+  margin-top:1px;
+}
+.law-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:7pt;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:1mm;
+}
+.law-body{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:6pt;
+  color:rgba(232,228,220,0.65);
+  line-height:1.55;
+}
+
+/* NARRATIVE */
+.narrative{
+  border-left:2px solid var(--green);
+  padding:3mm 5mm;
+  background:rgba(0,255,65,0.02);
+}
+.narrative p{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:7pt;
+  line-height:1.75;
+  color:rgba(232,228,220,0.78);
+  font-style:italic;
+}
+
+/* TYPE SPEC ROW */
+.type-spec{
+  background:var(--surface);
+  border:0.5px solid var(--border);
+  padding:4mm 5mm;
+  margin-bottom:2mm;
+}
+.type-spec-header{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5pt;
+  letter-spacing:0.2em;
+  color:var(--green);
+  text-transform:uppercase;
+  margin-bottom:2mm;
+}
+
+/* LOGO DEMO */
+.logo-demo{
+  background:rgba(15,17,20,0.9);
+  border:0.5px solid var(--border);
+  padding:6mm 8mm;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.logo-wordmark{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;
+  font-size:22pt;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--white);
+}
+.logo-rule{ width:100%;height:1px;background:var(--green);margin:2mm 0; }
+.logo-tagline{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:300;
+  font-size:8pt;
+  letter-spacing:0.35em;
+  text-transform:uppercase;
+  color:var(--white);
+  opacity:0.7;
+}
+
+/* STAMP */
+.stamp{
+  display:inline-flex;
+  align-items:center;
+  gap:3mm;
+  border:0.5px solid var(--red);
+  padding:2px 8px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:5.5pt;
+  color:var(--red);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
+.stamp::before,.stamp::after{ content:'██';font-size:5pt;opacity:0.7; }
+
+/* ARCHETYPE CARDS */
+.arch-card{
+  background:var(--surface);
+  border:0.5px solid var(--border);
+  padding:5mm;
+  position:relative;
+}
+.arch-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:1.5px;
+  background:linear-gradient(90deg,var(--green),transparent);
+}
+
+/* PERSONA PILL */
+.persona-row{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:2mm;
+  margin:3mm 0;
+}
+.persona-pill{
+  background:var(--surface);
+  border:0.5px solid var(--border);
+  padding:3mm 2mm;
+  text-align:center;
+  border-top:1px solid var(--green);
+}
+.persona-pill-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:600;
+  font-size:6pt;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--white);
+  margin-bottom:1.5mm;
+}
+.persona-pill-body{
+  font-family:'IBM Plex Sans',sans-serif;
+  font-size:5.5pt;
+  color:rgba(232,228,220,0.5);
+  line-height:1.5;
+}
+
+/* COVER BG ACCENT */
+.cover-bg-accent{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:200mm;height:200mm;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(0,255,65,0.04) 0%,transparent 70%);
+  pointer-events:none;
+  z-index:1;
+}
+
+/* SYMBOL SVG PLACEHOLDER */
+.symbol-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:5mm;
+}
+
+/* BACK COVER */
+.slide-back .content{
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 01 — COVER
+════════════════════════════════════════════ -->
+<div class="slide slide-cover">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">DOC: TSI-2026-BRAND-001</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="cover-bg-accent"></div>
+  <div class="bracket-tl"></div>
+  <div class="bracket-br"></div>
+  <div class="content">
+    <div class="cover-doc">Brand Identity &amp; Guidelines — Version 1.0 — Issued 2026</div>
+    <div class="cover-wordmark">TEMPIST SYSTEMS INC.</div>
+    <div class="cover-rule"></div>
+    <div class="cover-sub">Brand Identity &amp; Guidelines</div>
+    <div class="cover-stamp">CONFIDENTIAL</div>
+    <div class="cover-meta-row">
+      <div class="cover-meta-item">[ STATUS: <span>AUTHORIZED</span> ]</div>
+      <div class="cover-meta-item">[ BACKED: <span>LOCKSTEP / OBSIDIAN</span> ]</div>
+      <div class="cover-meta-item">[ PIPELINE: <span>$100M+</span> ]</div>
+      <div class="cover-meta-item">[ DEPLOYED: <span>UKRAINE THEATER</span> ]</div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">████ CONTROLLED DISTRIBUTION — AUTHORIZED PERSONNEL ONLY ████</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // 01 OF 36</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 02 — TABLE OF CONTENTS
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">DOCUMENT INDEX</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="bracket-tl"></div>
+  <div class="content">
+    <div class="slide-num">[ DOCUMENT INDEX ]</div>
+    <h2>Contents</h2>
+    <div class="rule"></div>
+    <div class="three-col">
+      <div>
+        <div class="card">
+          <div class="card-label">Chapter 01</div>
+          <div class="card-title">Brand Foundation</div>
+          <div class="card-body">Essence · Positioning · Promise · Personality · Voice · Archetypes</div>
+        </div>
+        <div style="height:2mm"></div>
+        <div class="card">
+          <div class="card-label">Chapter 02</div>
+          <div class="card-title">Verbal Identity</div>
+          <div class="card-body">Taglines · Messaging Architecture · Audience Frames · Lexicon · Boilerplate</div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-label">Chapter 03</div>
+          <div class="card-title">Visual Identity System</div>
+          <div class="card-body">Color · Typography · Logo · Graphic Language · Photography · Motion</div>
+        </div>
+        <div style="height:2mm"></div>
+        <div class="card">
+          <div class="card-label">Chapter 04</div>
+          <div class="card-title">Application Guidelines</div>
+          <div class="card-body">Documents · Presentations · Digital · Physical &amp; Environmental</div>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <div class="card-label">Chapter 05</div>
+          <div class="card-title">Brand Governance</div>
+          <div class="card-body">Tier Classification · Co-Branding Rules · The 10 Brand Laws</div>
+        </div>
+        <div style="height:2mm"></div>
+        <div class="card">
+          <div class="card-label">Chapter 06</div>
+          <div class="card-title">Brand Narrative Assets</div>
+          <div class="card-body">Origin Story · The Enemy · World Without / With · Key Proof Points</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>02 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 03 — CHAPTER 01 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 01</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 01 — TIER 1 / FOUNDATIONAL DOCTRINE ]</div>
+    <div class="chapter-title-large">Brand<br>Foundation</div>
+    <div class="chapter-desc">Essence · Positioning · Promise · Personality Attributes · Voice · Brand Archetypes — The load-bearing architecture of the Tempist identity. Handle with care. No modification without Brand Architecture authorization.</div>
+  </div>
+  <div class="chapter-num-large">01</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>03 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 04 — BRAND ESSENCE / POSITIONING / PROMISE
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">1.1 – 1.3 / ESSENCE · POSITIONING · PROMISE</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="bracket-tl"></div>
+  <div class="content">
+    <div class="slide-num">[ BRAND FOUNDATION — 1.1 / 1.2 / 1.3 ]</div>
+    <div class="two-col" style="gap:6mm">
+      <div>
+        <h3>1.1 Brand Essence</h3>
+        <div class="stmt">
+          <p>Tempist Systems is <strong>sovereign force, made inevitable</strong> — the convergence of autonomous intelligence and kinetic precision into infrastructure that does not ask permission.</p>
+        </div>
+        <div style="height:3mm"></div>
+        <h3>1.3 Brand Promise</h3>
+        <div class="stmt">
+          <p>When Tempist is deployed, the sky belongs to the mission. Every time. No exceptions. No renegotiation.</p>
+        </div>
+      </div>
+      <div>
+        <h3>1.2 Brand Positioning</h3>
+        <div class="card">
+          <div class="card-label">For</div>
+          <div class="card-body" style="margin-bottom:2mm">Sovereign governments, defense ministries, and institutional capital that require air superiority without compromise—</div>
+          <div class="card-label">Tempist Systems Is</div>
+          <div class="card-body" style="margin-bottom:2mm">The autonomous counter-threat infrastructure company that renders aerial swarm threats operationally obsolete—</div>
+          <div class="card-label">Because</div>
+          <div class="card-body">We are the only system that has already operated in live combat, at scale, with zero dependence on human reaction time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>04 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 05 — BRAND PERSONALITY (I-IV)
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">1.4 / BRAND PERSONALITY — ATTRIBUTES I–IV</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ BRAND PERSONALITY — 1.4 ]</div>
+    <h2 style="margin-bottom:3mm">Personality Attributes</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;flex:1">
+      <div class="card">
+        <div class="card-label">I.</div>
+        <div class="card-title">Sovereign Authority</div>
+        <div class="card-body">Tempist does not ask for a seat at the table. The table was built because Tempist exists. The posture of a system that has been combat-proven, backed by sovereign capital, designed for permanence.</div>
+        <div style="margin-top:2mm;display:grid;grid-template-columns:1fr 1fr;gap:2mm">
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--green)">IN ACTION:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Declarative. No hedging. Statements of fact.</span></div>
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--red)">NOT THIS:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Aggression or the performance of confidence.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">II.</div>
+        <div class="card-title">Operational Precision</div>
+        <div class="card-body">Every word, every visual, every system output: specified, measured, intentional. Precision is the operational DNA of a company whose product must function correctly the first time.</div>
+        <div style="margin-top:2mm;display:grid;grid-template-columns:1fr 1fr;gap:2mm">
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--green)">IN ACTION:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Monospace data. Copy stripped to load-bearing core.</span></div>
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--red)">NOT THIS:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Sterility for aesthetic effect.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">III.</div>
+        <div class="card-title">Quiet Inevitability</div>
+        <div class="card-body">The weather does not campaign for adoption. It arrives. Tempist communicates with the patience of a system that understands the arc of history is already bending toward its necessity.</div>
+        <div style="margin-top:2mm;display:grid;grid-template-columns:1fr 1fr;gap:2mm">
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--green)">IN ACTION:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">No urgency. No pressure tactics.</span></div>
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--red)">NOT THIS:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Passivity or aloofness.</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-label">IV.</div>
+        <div class="card-title">Classified Intelligence</div>
+        <div class="card-body">Tempist has access to information its audience does not. It has seen the threat models, operated inside the engagement envelopes. This creates epistemic authority — the brand knows something.</div>
+        <div style="margin-top:2mm;display:grid;grid-template-columns:1fr 1fr;gap:2mm">
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--green)">IN ACTION:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Selective disclosure. Technical specificity when relevant.</span></div>
+          <div style="font-size:5.5pt;font-family:'IBM Plex Mono',monospace;color:var(--red)">NOT THIS:<br><span style="font-family:'IBM Plex Sans',sans-serif;color:rgba(232,228,220,0.55)">Obscurantism to conceal weakness.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>05 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 06 — BRAND PERSONALITY (V-VII) + VOICE
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">1.4 / BRAND PERSONALITY — ATTRIBUTES V–VII</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ BRAND PERSONALITY — 1.4 CONTINUED ]</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3mm;margin-bottom:3mm">
+      <div class="card">
+        <div class="card-label">V.</div>
+        <div class="card-title">Machine Patience</div>
+        <div class="card-body">Tempist does not react. It executes. Swarm systems respond in milliseconds; the company operates across strategic years. Both are correct — dual temporal registers of defense infrastructure.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">VI.</div>
+        <div class="card-title">Lethal Elegance</div>
+        <div class="card-body">The most dangerous systems in history have been, by design, beautiful. T.E.M.P.I.S.T. is elegant because it is fully optimized. Elegance in Tempist is always functional — never decorative.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">VII.</div>
+        <div class="card-title">Irreversibility</div>
+        <div class="card-body">Tempist represents a threshold event. Before its deployment, a sovereign operates in one threat environment. After, that environment has fundamentally changed. The brand carries the gravity of transformation.</div>
+      </div>
+    </div>
+    <div class="rule"></div>
+    <h3>1.5 Brand Voice — Tone Descriptors</h3>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:2mm">
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">01</div><div class="card-title" style="font-size:7pt">Declarative</div></div>
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">02</div><div class="card-title" style="font-size:7pt">Precise</div></div>
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">03</div><div class="card-title" style="font-size:7pt">Classified-Dry</div></div>
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">04</div><div class="card-title" style="font-size:7pt">Sovereign</div></div>
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">05</div><div class="card-title" style="font-size:7pt">Cold-Certain</div></div>
+      <div class="card" style="text-align:center;padding:3mm 2mm"><div class="card-label" style="text-align:center">06</div><div class="card-title" style="font-size:7pt">Minimal-Weight</div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>06 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 07 — DO / DON'T VOICE EXAMPLES
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">1.5 / BRAND VOICE — WRITING EXAMPLES</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ BRAND VOICE — 1.5 ]</div>
+    <h2 style="margin-bottom:3mm">Do / Don't</h2>
+    <div class="dnd" style="flex:1">
+      <div class="dnd-col">
+        <div class="dnd-header do">// Tempist speaks like this</div>
+        <div class="dnd-item do">"Tempist operates where human reaction time is no longer an asset."</div>
+        <div class="dnd-item do">"The swarm does not negotiate. Neither do we."</div>
+        <div class="dnd-item do">"Deployed. Combat-proven. Available for sovereign procurement."</div>
+        <div class="dnd-item do">"Before Tempist. After Tempist. These are different threat environments."</div>
+        <div class="dnd-item do">"The threat is real. The system is ready. The question is authorization."</div>
+        <div class="dnd-item do">"We are the weather. We do not forecast ourselves."</div>
+        <div class="dnd-item do">"Sovereign. Autonomous. Irreversible."</div>
+      </div>
+      <div class="dnd-col">
+        <div class="dnd-header dont">// Never like this</div>
+        <div class="dnd-item dont">"Our AI-powered platform enables faster threat response!"</div>
+        <div class="dnd-item dont">"We're disrupting the counter-drone market with next-generation solutions."</div>
+        <div class="dnd-item dont">"We're excited to offer our cutting-edge technology to government partners!"</div>
+        <div class="dnd-item dont">"Tempist is changing the game in autonomous defense systems."</div>
+        <div class="dnd-item dont">"Contact us today to learn how Tempist can transform your capabilities!"</div>
+        <div class="dnd-item dont">"Tempist — the innovative, scalable solution for modern air defense challenges."</div>
+        <div class="dnd-item dont">"Next-gen. Agile. User-friendly."</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>07 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 08 — BRAND ARCHETYPES
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">1.6 / BRAND ARCHETYPES</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="bracket-tl"></div>
+  <div class="content">
+    <div class="slide-num">[ BRAND ARCHETYPES — 1.6 ]</div>
+    <h2 style="margin-bottom:4mm">The Ruler × The Magician</h2>
+    <div class="two-col" style="flex:none;margin-bottom:4mm">
+      <div class="arch-card">
+        <div class="card-label">Primary Archetype</div>
+        <div class="card-title" style="font-size:14pt;margin-bottom:2mm">The Ruler</div>
+        <p>The Ruler governs from the position of legitimate authority. Rulers do not compete — they preside. They don't pitch — they authorize. Tempist is an infrastructure provider at the sovereign level. Its customers are governments. Rulers speak in mandates. They define the conditions under which others operate.</p>
+        <div style="margin-top:2mm">
+          <div class="mono" style="font-size:6pt">// Declarative voice · Classified-document aesthetic · No urgency language</div>
+        </div>
+      </div>
+      <div class="arch-card">
+        <div class="card-label">Secondary Archetype</div>
+        <div class="card-title" style="font-size:14pt;margin-bottom:2mm">The Magician</div>
+        <p>The Magician operates at the threshold of the possible — turning vision into reality, transforming environments. Tempist's swarm technology is genuinely magical: autonomous, convergent, EMP-capable. Its outcomes exceed what the inputs logically seem to promise.</p>
+        <div style="margin-top:2mm">
+          <div class="mono" style="font-size:6pt">// "We are the weather" · Transformation language · Before/after framing</div>
+        </div>
+      </div>
+    </div>
+    <div class="stmt">
+      <p><strong>The Tension Creates Power:</strong> The Ruler says trust this because of its legitimacy. The Magician says trust this because it does things the uninitiated cannot fully comprehend. Together: the brand experience of a classified program. Authorized to know it works. Not authorized to know exactly how.</p>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>08 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 09 — CHAPTER 02 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 02</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 02 — TIER 1 / CONTROLLED MESSAGING ]</div>
+    <div class="chapter-title-large">Verbal<br>Identity</div>
+    <div class="chapter-desc">Tagline Hierarchy · Messaging Architecture · Audience Frames · Lexicon · Boilerplate Copy — Do not modify without Brand Architecture sign-off.</div>
+  </div>
+  <div class="chapter-num-large">02</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>09 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 10 — TAGLINES
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">2.1 / TAGLINE HIERARCHY</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ TAGLINE HIERARCHY — 2.1 ]</div>
+    <div class="logo-demo" style="margin-bottom:4mm">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:5.5pt;letter-spacing:0.25em;color:var(--steel);text-transform:uppercase;margin-bottom:3mm">PRIMARY TAGLINE — CONFIRMED &amp; ELEVATED — FOUR WORDS. ONE PERIOD. NO EXCEPTIONS.</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:26pt;letter-spacing:0.12em;color:var(--white)">We are the weather.</div>
+    </div>
+    <h3>Secondary Taglines — Context-Specific</h3>
+    <div class="three-col">
+      <div class="card">
+        <div class="card-label">// Investor / Capital</div>
+        <div class="card-title" style="font-size:7.5pt;font-style:italic">"Infrastructure for the threat environment you haven't modeled yet."</div>
+        <div class="card-body">For sophisticated capital that understands infrastructure plays vs. point solutions.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">// Sovereign / Government</div>
+        <div class="card-title" style="font-size:7.5pt;font-style:italic">"The sky above your sovereign territory. Reclaimed."</div>
+        <div class="card-body">Speaks to territorial integrity — a restoration of sovereignty, not a product.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">// Operational / Field</div>
+        <div class="card-title" style="font-size:7.5pt;font-style:italic">"Authorization complete. Intercept sequence initiated."</div>
+        <div class="card-body">For procurement officers, special operations, and technical integrators.</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>10 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 11 — MESSAGING ARCHITECTURE
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">2.2 / MESSAGING ARCHITECTURE</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="bracket-tl"></div>
+  <div class="content">
+    <div class="slide-num">[ MESSAGING ARCHITECTURE — 2.2 ]</div>
+    <h2 style="margin-bottom:3mm">Three-Tier Message Hierarchy</h2>
+    <div style="display:flex;flex-direction:column;gap:3mm;flex:1">
+      <div class="card" style="flex:1">
+        <div style="display:flex;gap:5mm;align-items:flex-start">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18pt;color:var(--green);opacity:0.6;flex-shrink:0">T1</div>
+          <div>
+            <div class="card-label">Brand Level — Who We Are</div>
+            <div class="card-body">Tempist Systems is the sovereign-grade autonomous counter-threat infrastructure company. Not a startup. Not a vendor. A new category of defense capability — the kind that changes what a government can guarantee its people.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="flex:1">
+        <div style="display:flex;gap:5mm;align-items:flex-start">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18pt;color:var(--green);opacity:0.6;flex-shrink:0">T2</div>
+          <div>
+            <div class="card-label">Category Level — What We're Changing</div>
+            <div class="card-body">The drone proliferation threat has outpaced every existing counter-UAV framework. T.E.M.P.I.S.T. closes that gap — not incrementally, but categorically. A $400 drone now threatens a $40M asset. The asymmetry ends here.</div>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="flex:1">
+        <div style="display:flex;gap:5mm;align-items:flex-start">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18pt;color:var(--green);opacity:0.6;flex-shrink:0">T3</div>
+          <div>
+            <div class="card-label">Product Level — How It Works</div>
+            <div class="card-body">T.E.M.P.I.S.T. deploys a coordinated swarm of EMP-equipped interceptors that detects, classifies, assigns, intercepts, and neutralizes aerial threats faster than any human controller can authorize — and resets for the next engagement without operator input.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>11 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 12 — AUDIENCE MESSAGING
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">2.3 / AUDIENCE-SPECIFIC MESSAGING</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ AUDIENCE MESSAGING — 2.3 ]</div>
+    <h2 style="margin-bottom:3mm">Message Frames by Audience</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:3mm;flex:1">
+      <div class="card">
+        <div class="card-label">Sovereign / Government Buyers</div>
+        <div class="card-title">Sovereignty Infrastructure</div>
+        <div class="card-body" style="margin-bottom:2mm">This is not a defense purchase. It is a sovereignty infrastructure decision. Lead with: combat deployment, ITAR compliance, in-country manufacturing JV availability, EMP zero-debris advantage.</div>
+        <div class="mono" style="font-size:5.5pt">Sovereign deployment · Territorial integrity · Operational authority · In-theater proven</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Institutional Investors</div>
+        <div class="card-title">Infrastructure Layer Play</div>
+        <div class="card-body" style="margin-bottom:2mm">Tempist is the infrastructure layer of the autonomous aerial defense market. Lead with: $100M+ sovereign pipeline, manufacturing JV structure, platform architecture, directed energy roadmap.</div>
+        <div class="mono" style="font-size:5.5pt">Infrastructure play · Category-defining · Sovereign pipeline · Platform not product</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Defense Contractors / Integrators</div>
+        <div class="card-title">Integration-Ready System</div>
+        <div class="card-body" style="margin-bottom:2mm">T.E.M.P.I.S.T. is designed for integration. Open architecture, ITAR structure, JV accessibility. Technical specs available under appropriate NDA and authorization.</div>
+        <div class="mono" style="font-size:5.5pt">Integration-ready · Spec-available · Compliance-structured · JV-accessible</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Internal Team</div>
+        <div class="card-title">Cleared for This Mission</div>
+        <div class="card-body" style="margin-bottom:2mm">We are not building a company. We are building defense infrastructure that changes what nations can guarantee their people. Operational standards, not corporate standards.</div>
+        <div class="mono" style="font-size:5.5pt">Cleared for this · Mission-critical · Doctrine not policy · Historical stakes</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>12 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 13 — LEXICON
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">2.4 / LEXICON &amp; TERMINOLOGY</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ LEXICON — 2.4 ]</div>
+    <h2 style="margin-bottom:3mm">Language Ownership</h2>
+    <div class="two-col">
+      <div>
+        <h3>Words Tempist OWNS</h3>
+        <div style="display:flex;flex-direction:column;gap:1mm">
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">T.E.M.P.I.S.T.</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Full acronym always with periods</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">Swarm</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Both threat and solution — duality intentional</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">Intercept sequence</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Not "attack" or "response"</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">Sovereign deployment</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Not "selling to governments"</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">Doctrine</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Not "values" or "principles"</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">Cleared</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">"Cleared for this mission" — internal</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div class="mono" style="font-size:6pt">In-theater</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Always hyphenated</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0"><div class="mono" style="font-size:6pt">The weather</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Tempist's presence and inevitability</div></div>
+        </div>
+      </div>
+      <div>
+        <h3>Words Tempist AVOIDS</h3>
+        <div style="display:flex;flex-direction:column;gap:1mm">
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Innovative / Disruptive</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Startup lexicon. Wrong register.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Next-generation</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Implies predecessor. New category.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Game-changing</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Consumer sports language.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Excited / Passionate</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Teams are committed, not excited.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Solutions / Ecosystem</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Too generic / tech startup vocab.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Scale (as verb)</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">"Extend operational reach" instead.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0;border-bottom:0.5px solid var(--border)"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Space (market term)</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">"Counter-UAV market" instead.</div></div>
+          <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:2mm;padding:1.5mm 0"><div style="font-size:6pt;font-family:'IBM Plex Mono',monospace;color:var(--red);text-decoration:line-through">Startup</div><div style="font-size:6pt;color:rgba(232,228,220,0.55);font-family:'IBM Plex Sans',sans-serif">Tempist is a defense infrastructure company.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>13 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 14 — BOILERPLATE COPY
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">2.5 / BOILERPLATE COPY</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ BOILERPLATE COPY — 2.5 ]</div>
+    <h2 style="margin-bottom:3mm">Approved Copy — By Length</h2>
+    <div style="display:flex;flex-direction:column;gap:2.5mm;flex:1">
+      <div class="bkt">
+        <h4>25-Word Version</h4>
+        <p style="font-size:7.5pt;color:var(--white)">Tempist Systems builds T.E.M.P.I.S.T. — autonomous counter-UAV swarm infrastructure, combat-proven in Ukraine, engineered for sovereign deployment worldwide. We are the weather.</p>
+      </div>
+      <div class="bkt">
+        <h4>50-Word Version</h4>
+        <p style="font-size:7pt;color:rgba(232,228,220,0.85)">Tempist Systems Inc. develops T.E.M.P.I.S.T. — Tactical EMP Interceptor Swarm Technology — the autonomous counter-UAV platform engineered for sovereign-scale aerial threat neutralization. Combat-proven in Ukraine's active conflict theater, T.E.M.P.I.S.T. closes the engagement window before human reaction time becomes relevant. Built for governments. Designed for permanence. We are the weather.</p>
+      </div>
+      <div class="bkt">
+        <h4>LinkedIn / Website About (150–200 Words)</h4>
+        <p style="font-size:6.5pt;color:rgba(232,228,220,0.78)">The proliferation of commercial and military UAVs has created a threat class that existing defense frameworks were not designed to counter. A $400 drone can now compromise a $40M asset. Human reaction time — long the currency of aerial defense — is no longer a viable denominator.</p>
+        <p style="font-size:6.5pt;color:rgba(232,228,220,0.78);margin-top:1.5mm">Tempist Systems builds T.E.M.P.I.S.T.: Tactical EMP Interceptor Swarm Technology. An autonomous counter-UAV platform that deploys coordinated interceptor swarms, closes engagement windows before human controllers can respond, and resets for the next threat without operator input. Combat-proven. Ukraine-deployed. ITAR-structured. Sovereign-ready. Backed by Lockstep Ventures and Obsidian Capital Partners. $100M+ sovereign pipeline. We are the weather.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>14 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 15 — CHAPTER 03 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 03</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 03 — TIER 1 / VISUAL DOCTRINE ]</div>
+    <div class="chapter-title-large">Visual Identity<br>System</div>
+    <div class="chapter-desc">Color · Typography · Logo System · Graphic Language · Photography Direction · Motion Principles — All production materials require Brand Architecture approval.</div>
+  </div>
+  <div class="chapter-num-large">03</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>15 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 16 — COLOR SYSTEM
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.1 / COLOR SYSTEM</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ COLOR SYSTEM — 3.1 ]</div>
+    <h2 style="margin-bottom:4mm">Brand Palette</h2>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3mm;margin-bottom:4mm">
+      <div class="swatch">
+        <div class="swatch-color" style="background:#0A0B0E"></div>
+        <div class="swatch-info"><div class="swatch-name">Ops Background</div><div class="swatch-hex">#0A0B0E</div><div class="swatch-role">Primary Black</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#00FF41"></div>
+        <div class="swatch-info"><div class="swatch-name">Signal Green</div><div class="swatch-hex">#00FF41</div><div class="swatch-role">Operational Active</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#E8E4DC;border:0.5px solid #2a2a2a"></div>
+        <div class="swatch-info"><div class="swatch-name">Classified White</div><div class="swatch-hex">#E8E4DC</div><div class="swatch-role">Primary Text</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#CC1100"></div>
+        <div class="swatch-info"><div class="swatch-name">Threat Red</div><div class="swatch-hex">#CC1100</div><div class="swatch-role">Alert / Intercept</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#4A5568"></div>
+        <div class="swatch-info"><div class="swatch-name">Steel Blue-Grey</div><div class="swatch-hex">#4A5568</div><div class="swatch-role">Cold Atmosphere</div></div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-color" style="background:#1a1c22;border:0.5px solid #2a2a2a"></div>
+        <div class="swatch-info"><div class="swatch-name">Ghost</div><div class="swatch-hex">#FFF @ 4%</div><div class="swatch-role">Texture / Overlay</div></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3mm">
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Ops Background</div><div class="card-body">All primary digital backgrounds, document fields, presentation masters. Not pure black — it has depth.</div></div>
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Signal Green</div><div class="card-body">Used in ONE element per visual. Signal, not palette. Never placed on white. Never in large surface areas.</div></div>
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Classified White</div><div class="card-body">Primary text. The slight warmth of a classified document. Never pure #FFFFFF in any Tempist material.</div></div>
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Threat Red</div><div class="card-body">Extreme restraint. Maximum 3% of any visual surface. Never decorative. Alert states only.</div></div>
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Steel Blue-Grey</div><div class="card-body">Secondary text, supporting data, inactive states. Never competes with Signal Green for priority.</div></div>
+      <div class="card" style="font-size:5.5pt"><div class="card-label">Ghost</div><div class="card-body">Texture layer only. Maximum 10% opacity. Never as a solid color. Scanlines and noise only.</div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>16 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 17 — TYPOGRAPHY
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.2 / TYPOGRAPHY SYSTEM</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ TYPOGRAPHY SYSTEM — 3.2 ]</div>
+    <h2 style="margin-bottom:3mm">Type System</h2>
+    <div style="display:flex;flex-direction:column;gap:3mm;flex:1">
+      <div class="type-spec">
+        <div class="type-spec-header">PRIMARY — SPACE GROTESK — HEADLINES / WORDMARK / PRIMARY STATEMENTS</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28pt;letter-spacing:0.1em;text-transform:uppercase;color:var(--white);line-height:1">SPACE GROTESK</div>
+        <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:11pt;letter-spacing:0.35em;text-transform:uppercase;color:rgba(232,228,220,0.5);margin-top:1mm">LIGHT WEIGHT — WE ARE THE WEATHER.</div>
+        <div style="margin-top:2mm;font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--steel)">Weights: 300 / 400 / 500 / 600 / 700 · Google Fonts · Never italic in brand system</div>
+      </div>
+      <div class="type-spec">
+        <div class="type-spec-header">SECONDARY — IBM PLEX SANS — BODY COPY / DOCUMENTS / BRIEFINGS</div>
+        <div style="font-family:'IBM Plex Sans',sans-serif;font-size:11pt;color:var(--white)">IBM Plex Sans — Designed for institutional documentation and technical contexts. The document voice of Tempist briefings.</div>
+        <div style="margin-top:2mm;font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--steel)">Weights: 300 / 400 / 500 / 600 · Google Fonts · For extended copy over 3 lines</div>
+      </div>
+      <div class="type-spec">
+        <div class="type-spec-header">MONOSPACE — IBM PLEX MONO — DATA / COORDINATES / UI READOUTS / SYSTEM VOICE</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9pt;color:var(--green)">[ TARGET: LAT 48.3794°N / LON 31.1656°E / ALT 185m ]</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:8pt;color:var(--white);margin-top:1mm">[ SN: TSI-2026-004712 ] // [ STATUS: INTERCEPT_ACTIVE // NEUTRALIZED: 14 ]</div>
+        <div style="margin-top:2mm;font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--steel)">Weights: 400 / 700 · Google Fonts · Bold for active states, Regular for historical data</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>17 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 18 — LOGO SYSTEM
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.3 / LOGO SYSTEM</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ LOGO SYSTEM — 3.3 ]</div>
+    <div class="two-col">
+      <div style="display:flex;flex-direction:column;gap:3mm">
+        <div class="logo-demo" style="flex:1">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:5pt;letter-spacing:0.2em;color:var(--steel);margin-bottom:2mm;text-transform:uppercase">Primary Wordmark + Lockup</div>
+          <div class="logo-wordmark" style="font-size:16pt">TEMPIST SYSTEMS INC.</div>
+          <div class="logo-rule"></div>
+          <div class="logo-tagline">We are the weather.</div>
+        </div>
+        <div class="logo-demo" style="flex:none;padding:4mm 6mm">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:5pt;letter-spacing:0.2em;color:var(--steel);margin-bottom:2mm;text-transform:uppercase">Abbreviated Wordmark</div>
+          <div class="logo-wordmark" style="font-size:16pt">TEMPIST SYSTEMS</div>
+        </div>
+        <div class="logo-demo" style="flex:none;padding:4mm 6mm">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:5pt;letter-spacing:0.2em;color:var(--steel);margin-bottom:2mm;text-transform:uppercase">Acronym Treatment</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18pt;letter-spacing:0.25em;color:var(--white)">T.E.M.P.I.S.T.</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:6pt;letter-spacing:0.3em;color:var(--steel);margin-top:1mm">TACTICAL · EMP · INTERCEPTOR · SWARM · TECHNOLOGY</div>
+        </div>
+      </div>
+      <div>
+        <h3>Prohibited Treatments</h3>
+        <ul class="check-list">
+          <li style="color:rgba(204,17,0,0.7)"><span style="margin-top:1px">Do not alter the typeface from Space Grotesk Bold</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not place the wordmark in Signal Green</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not add drop shadows, glows, or 3D effects</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not stretch or distort horizontally or vertically</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not rotate — appears at 0° only</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not place on patterned or photographic backgrounds without approval</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not animate outside specified Motion Principles</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not surround with decorative elements</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not embed the primary tagline within the logo lockup</span></li>
+          <li style="color:rgba(204,17,0,0.7)"><span>Do not reproduce below 40mm / 160px width</span></li>
+        </ul>
+        <div class="rule-dim"></div>
+        <h4>Clearspace Rule</h4>
+        <p style="font-size:6.5pt">Minimum clearspace = height of the capital T in "TEMPIST" on all four sides. No element may intrude.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>18 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 19 — SYMBOL MARK
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.3 / SYMBOL MARK — CONVERGENCE ICON</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ SYMBOL MARK — 3.3 ]</div>
+    <h2 style="margin-bottom:3mm">Convergence Icon</h2>
+    <div class="two-col">
+      <div style="display:flex;align-items:center;justify-content:center">
+        <div style="background:rgba(15,17,20,0.9);border:0.5px solid var(--border);padding:8mm;display:flex;flex-direction:column;align-items:center;gap:4mm;width:100%">
+          <svg width="90" height="90" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="print-color-adjust:exact;-webkit-print-color-adjust:exact">
+            <circle cx="60" cy="60" r="5.5" stroke="#00FF41" stroke-width="1.2" fill="none" opacity="0.95"/>
+            <line x1="60" y1="10" x2="60" y2="50" stroke="url(#pg1)" stroke-width="1"/>
+            <line x1="60" y1="110" x2="60" y2="70" stroke="url(#pg2)" stroke-width="1"/>
+            <line x1="10" y1="60" x2="50" y2="60" stroke="url(#pg3)" stroke-width="1"/>
+            <line x1="110" y1="60" x2="70" y2="60" stroke="url(#pg4)" stroke-width="1"/>
+            <line x1="22" y1="22" x2="52" y2="52" stroke="url(#pg5)" stroke-width="1"/>
+            <line x1="98" y1="98" x2="68" y2="68" stroke="url(#pg6)" stroke-width="1"/>
+            <line x1="98" y1="22" x2="68" y2="52" stroke="url(#pg7)" stroke-width="1"/>
+            <line x1="22" y1="98" x2="52" y2="68" stroke="url(#pg8)" stroke-width="1"/>
+            <defs>
+              <linearGradient id="pg1" x1="60" y1="10" x2="60" y2="50" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg2" x1="60" y1="110" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg3" x1="10" y1="60" x2="50" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg4" x1="110" y1="60" x2="70" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg5" x1="22" y1="22" x2="52" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg6" x1="98" y1="98" x2="68" y2="68" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg7" x1="98" y1="22" x2="68" y2="52" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+              <linearGradient id="pg8" x1="22" y1="98" x2="52" y2="68" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
+            </defs>
+          </svg>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--steel);text-align:center;letter-spacing:0.12em;text-transform:uppercase">Convergence Icon — Signal Green on Ops Background</div>
+        </div>
+      </div>
+      <div>
+        <h3>Design Brief for Designer</h3>
+        <ul class="check-list" style="gap:2mm">
+          <li>8 equidistant vector lines originating outside the center circle, converging toward center</li>
+          <li>Each line fades to 0% opacity 15-20% before reaching the center point — the visual of arrival without completion</li>
+          <li>Center ring: 1:8 ratio to overall mark diameter, slightly thicker on western arc (suggests activation)</li>
+          <li>No arrowheads, no decorations — geometry communicates directionality</li>
+          <li>Vector lines range 85–100% of max radius — variable lengths represent distributed interceptor travel distances converging simultaneously</li>
+          <li>Single color only — Signal Green on Ops Background (primary) or Classified White (secondary)</li>
+        </ul>
+        <div class="rule-dim"></div>
+        <h4>Symbolic Intent</h4>
+        <p style="font-size:6.5pt">Multiple autonomous interceptors reaching simultaneously-assigned targets from different vectors. The mathematical limit approaching zero — the closing of distance between threat and intercept, from multiple directions simultaneously.</p>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>19 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 20 — GRAPHIC LANGUAGE
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.4 / GRAPHIC LANGUAGE &amp; VISUAL SYSTEM</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ GRAPHIC LANGUAGE — 3.4 ]</div>
+    <h2 style="margin-bottom:3mm">Visual System Elements</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2.5mm;flex:1">
+      <div class="card">
+        <div class="card-label">Grid Overlays</div>
+        <div class="card-title">Targeting Reticles</div>
+        <div class="card-body">0.5px lines. Signal Green 10-18% opacity. Full-bleed or corner-anchored. Slight offset — an operational scan, not decorative gridwork. Background element only.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Corner Brackets</div>
+        <div class="card-title">Frame Elements</div>
+        <div class="card-body">1px sharp 90° corners. Arm length 12-40px. Signal Green = active content. Steel Blue = supporting. Content framed = important. Never decorative.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Data Readouts</div>
+        <div class="card-title">System Voice</div>
+        <div class="card-body">IBM Plex Mono. Square brackets. Items separated by //. Signal Green = active data. Steel Blue = historical. Real or operationally plausible data only.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Redaction Device</div>
+        <div class="card-title">Selective Disclosure</div>
+        <div class="card-body">Black-bar redaction. [CLASSIFIED] in Threat Red. Bars must completely cover content — partial redactions prohibited. Editorial use only, never in legal documents.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Scanline Texture</div>
+        <div class="card-title">Ghost Overlay</div>
+        <div class="card-body">1px horizontal lines, 4-6% opacity, 2px pitch. Applied to backgrounds only. Never on typography. Maximum 8% before becoming distraction.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Swarm Visualization</div>
+        <div class="card-title">Coordinated Vectors</div>
+        <div class="card-body">Small equilateral triangles, direction-pointing. Coordinated vectors converging on designated targets. Order from distributed intelligence — never organic, never random.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">EMP Pulse Rings</div>
+        <div class="card-title">Signal Elements</div>
+        <div class="card-body">Concentric circles expanding from origin. Line weight decreasing outward. Opacity 80% to 0%. Signal Green. Maximum 1pt stroke. Follows physics of wave propagation.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">Classification Stamp</div>
+        <div class="card-title">Authority Mark</div>
+        <div class="card-body">IBM Plex Mono Bold. Threat Red border. Top-right covers, bottom-left interiors. Watermark at -45°, 6-8% opacity. Only on materials with content worthy of the notation.</div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>20 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 21 — PHOTOGRAPHY + MOTION
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">3.5 – 3.6 / PHOTOGRAPHY &amp; MOTION PRINCIPLES</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ PHOTOGRAPHY + MOTION — 3.5 / 3.6 ]</div>
+    <div class="two-col">
+      <div>
+        <h3>3.5 Photography Direction</h3>
+        <h4>Art Direction Principles</h4>
+        <ul class="check-list" style="margin-bottom:3mm">
+          <li>The subject is always the environment, not the hardware</li>
+          <li>Human subjects are never identified — faces obscured or in shadow</li>
+          <li>Operational scale over product scale — horizon lines, atmospheric depth</li>
+          <li>Grain is authorized; blur is not — Tempist does not operate out of focus</li>
+          <li>The weather is always present — storm fronts, haze, atmospheric phenomena</li>
+        </ul>
+        <h4>Color Grade Specification</h4>
+        <ul class="check-list">
+          <li>Contrast: High — crush blacks to Ops Background levels</li>
+          <li>Temperature: Cold to neutral — remove warmth from midtones</li>
+          <li>Saturation: Significantly reduced, except Signal Green channel (radar screens)</li>
+          <li>Grain: 8-15% photographic noise added</li>
+          <li>Vignette: Edge darkening to Ops Background</li>
+        </ul>
+      </div>
+      <div>
+        <h3>3.6 Motion &amp; Animation Principles</h3>
+        <div style="display:flex;flex-direction:column;gap:2mm">
+          <div class="card">
+            <div class="card-label">Movement Language</div>
+            <div class="card-body">Elements do not float or bounce. They compute. The physics of a system processing its next instruction: precise transitions, no overshoot, no playful momentum.</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Entry / Exit Timings</div>
+            <div class="card-body">Text: 200-400ms constant fade. Data readouts: 30-50ms/character terminal population. Frame elements: 400-600ms constant-velocity draw. Classification stamp: 0ms — it was always there.</div>
+          </div>
+          <div class="card">
+            <div class="card-label">Transitions</div>
+            <div class="card-body">Hard cut or 200ms fade-through-black. No wipe, push, or morph. Data updates: linear character replacement at 20ms/character. No ease-in-out on state changes.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>21 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 22 — CHAPTER 04 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 04</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 04 — TIER 2 / PRODUCTION STANDARDS ]</div>
+    <div class="chapter-title-large">Application<br>Guidelines</div>
+    <div class="chapter-desc">Document System · Presentation System · Digital Presence · Physical &amp; Environmental — Approved for cleared production personnel.</div>
+  </div>
+  <div class="chapter-num-large">04</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>22 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 23 — DOCUMENT + PRESENTATION SYSTEM
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">4.1 – 4.2 / DOCUMENT &amp; PRESENTATION SYSTEM</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ DOCUMENT + PRESENTATION — 4.1 / 4.2 ]</div>
+    <div class="two-col">
+      <div>
+        <h3>4.1 Classified Briefing Format</h3>
+        <div style="background:#060708;border:0.5px solid var(--border);margin-bottom:2mm;overflow:hidden;font-family:'IBM Plex Mono',monospace;font-size:6pt">
+          <div style="background:#0f1114;border-bottom:0.5px solid var(--border);padding:1.5mm 3mm;display:flex;justify-content:space-between;color:var(--white)">
+            <span>TEMPIST SYSTEMS INC.</span>
+            <span style="color:var(--green)">DOC: TSI-2026-000147</span>
+            <span style="color:var(--steel)">PAGE: 1 OF 24</span>
+          </div>
+          <div style="padding:3mm;color:rgba(232,228,220,0.3);line-height:1.8;font-size:5.5pt">
+            ████████ DOCUMENT TITLE ███████████████████<br>
+            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░<br>
+            ░░░░░░░ BODY CONTENT AREA ░░░░░░░░░░░░░░
+          </div>
+          <div style="background:#0f1114;border-top:0.5px solid var(--border);padding:1.5mm 3mm;display:flex;justify-content:space-between">
+            <span style="color:var(--red);font-size:5pt">████ CONTROLLED DISTRIBUTION ████</span>
+            <span style="color:var(--steel);font-size:5pt">TSI-2026-000147</span>
+          </div>
+        </div>
+        <ul class="check-list">
+          <li>Page number always shows [N] OF [TOTAL] — never page alone</li>
+          <li>Serial numbers: TSI-[YEAR]-[6-DIGIT SEQUENCE]</li>
+          <li>Classification stamp: top-right cover, bottom-left interior</li>
+          <li>Watermark: center, -45°, 6-8% opacity, all interior pages</li>
+        </ul>
+      </div>
+      <div>
+        <h3>4.2 Presentation Masters</h3>
+        <div class="card" style="margin-bottom:2mm">
+          <div class="card-label">Dark-Field Primary (Default)</div>
+          <div class="card-body">Ops Background. IBM Plex Mono header/footer. Corner brackets Signal Green upper-left only. Ghost scanline 4%. Grid overlay Signal Green 10% behind all content.</div>
+        </div>
+        <div class="card" style="margin-bottom:2mm">
+          <div class="card-label">Light-Field Variant (Government Formal)</div>
+          <div class="card-body">Classified White background. All typography in Ops Background. No scanline or grid overlay. Classified feel through typography and structure alone.</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Investor vs. Government Briefings</div>
+          <div class="card-body">Investor: slightly more whitespace, Lockstep/Obsidian co-branding visible. Government: denser, more technical, classification stamps prominent. Light-field variant available.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>23 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 24 — DIGITAL + PHYSICAL
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">4.3 – 4.4 / DIGITAL PRESENCE &amp; PHYSICAL</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ DIGITAL + PHYSICAL — 4.3 / 4.4 ]</div>
+    <div class="two-col">
+      <div>
+        <h3>4.3 Digital Presence</h3>
+        <div class="narrative" style="margin-bottom:3mm">
+          <p>Landing on tempist.com should feel like gaining authorization to a system that was running before you arrived. The visitor does not browse — they receive a briefing. Environmental state loads first: dark field, atmospheric, timestamp initiating, coordinate populating. Navigation is a document index, not a consumer menu.</p>
+        </div>
+        <h4>LinkedIn Direction</h4>
+        <ul class="check-list">
+          <li>Dark-field graphics only — no stock drone photography</li>
+          <li>Infrequent and deliberate — quality over frequency</li>
+          <li>Every post reads like it was declassified for specific release</li>
+          <li>No congratulatory content, no team culture posts</li>
+          <li>Submit button: "SUBMIT REQUEST" — never "Send"</li>
+        </ul>
+      </div>
+      <div>
+        <h3>4.4 Physical &amp; Environmental</h3>
+        <div class="card" style="margin-bottom:2mm">
+          <div class="card-label">Challenge Coins</div>
+          <div class="card-body">40mm antique brass. Black enamel field. Convergence Icon obverse, "WE ARE THE WEATHER." reverse. Ridged edge — no smooth edge. Operational tokens, not decorative.</div>
+        </div>
+        <div class="card" style="margin-bottom:2mm">
+          <div class="card-label">Trade Show Environment</div>
+          <div class="card-body">Black draped walls — no open perimeter. Low cool-temperature operational lighting. Large-format dark-field display. Briefing packets not brochures. No background music.</div>
+        </div>
+        <div class="card">
+          <div class="card-label">Vehicles &amp; Hardware</div>
+          <div class="card-body">Matte black only. Wordmark decal 150mm, rear-left. Hardware in matte black Cerakote/powder coat. Engraved serial number plates — no consumer product labeling.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>24 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 25 — CHAPTER 05 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 05</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 05 — TIER 1 / OPERATIONAL STANDARDS ]</div>
+    <div class="chapter-title-large">Brand<br>Governance</div>
+    <div class="chapter-desc">Tier Classification · Co-Branding Rules · The 10 Brand Laws — Compliance mandatory. Violations require formal after-action review.</div>
+  </div>
+  <div class="chapter-num-large">05</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>25 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 26 — BRAND LAWS 01–05
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">5.3 / THE 10 BRAND LAWS — 01–05</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ THE 10 BRAND LAWS — 5.3 ]</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:5.5pt;color:var(--steel);letter-spacing:0.12em;margin-bottom:3mm">THESE ARE NOT GUIDELINES. THEY ARE OPERATIONAL ORDERS. VIOLATIONS REQUIRE A FORMAL AFTER-ACTION REVIEW.</div>
+    <div style="display:flex;flex-direction:column;gap:2mm;flex:1">
+      <div class="law-item"><div class="law-num">LAW 01</div><div><div class="law-title">The Wordmark Is Not a Design Element</div><div class="law-body">The wordmark is an authorization stamp. It appears once per visual surface, in its specified form, in its specified color, at its specified minimum size. That is all.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 02</div><div><div class="law-title">Signal Green Is a Signal, Not a Palette</div><div class="law-body">Signal Green communicates one thing: the system is active. In any given visual, Signal Green may appear in one element at a time. If you have used it on two elements, you have used it incorrectly.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 03</div><div><div class="law-title">Precision Is Not Optional</div><div class="law-body">Every specification — clearspace measurements, tracking values, opacity percentages, color codes — is not a suggestion. The brand communicates precision by being precise. Approximate compliance is a violation.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 04</div><div><div class="law-title">Never Explain the Joke</div><div class="law-body">Tempist communications do not contain meta-commentary or footnotes interpreting the brand aesthetic. The brand is what it is. Audiences either understand it or they are not the audience.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 05</div><div><div class="law-title">The Brand Has No Opinions About the Competition</div><div class="law-body">No competitor is named in any Tempist communication. No competitive comparison is made. The brand does not acknowledge that alternatives exist. Tempist's confidence does not require contrast.</div></div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>26 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 27 — BRAND LAWS 06–10
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">5.3 / THE 10 BRAND LAWS — 06–10</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ THE 10 BRAND LAWS — 5.3 CONTINUED ]</div>
+    <div style="display:flex;flex-direction:column;gap:2mm;flex:1">
+      <div class="law-item"><div class="law-num">LAW 06</div><div><div class="law-title">Urgency Is a Weakness</div><div class="law-body">If a Tempist communication expresses urgency — "act now," "limited availability" — it has failed. Urgency is the language of entities that need a decision before the audience has time to think clearly.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 07</div><div><div class="law-title">Data Is Not Decoration</div><div class="law-body">Every coordinate, serial number, timestamp, and data readout in Tempist materials is real or operationally plausible. Fake data used for decorative effect is a violation. The brand's data aesthetic is only powerful if it is true.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 08</div><div><div class="law-title">The Voice Is Uniform Across All Channels</div><div class="law-body">There is no "casual" Tempist. There is no "friendly" Tempist for social media. The voice may modulate in register but the fundamental characteristics — declarative, precise, sovereign, cold-certain — do not change.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 09</div><div><div class="law-title">The Classification Is Not Theater</div><div class="law-body">Materials with classification stamps must contain information worthy of that notation. Materials that use the classified aesthetic but contain no meaningful content violate the brand's fundamental claim to operational seriousness.</div></div></div>
+      <div class="law-item"><div class="law-num">LAW 10</div><div><div class="law-title">We Are the Weather</div><div class="law-body">The tagline is a declaration of category. Materials that fail to carry the full weight of the brand — that approximate rather than execute — do not make the weather. They get wet.</div></div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>27 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 28 — CHAPTER 06 DIVIDER
+════════════════════════════════════════════ -->
+<div class="slide slide-chapter">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">CHAPTER 06</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="chapter-accent"></div>
+  <div class="content" style="padding-left:14mm;justify-content:center">
+    <div class="chapter-label">[ CHAPTER 06 — TIER 1 / FOUNDATIONAL NARRATIVE ]</div>
+    <div class="chapter-title-large">Brand Narrative<br>Assets</div>
+    <div class="chapter-desc">Origin Story · The Enemy · The World Without / With · Key Proof Points — For investor presentations, leadership communications, and brand storytelling.</div>
+  </div>
+  <div class="chapter-num-large">06</div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>28 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 29 — ORIGIN STORY
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">6.1 / THE ORIGIN STORY</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="bracket-tl"></div>
+  <div class="content">
+    <div class="slide-num">[ THE ORIGIN STORY — 6.1 ]</div>
+    <h2 style="margin-bottom:4mm">The Origin Story</h2>
+    <div class="narrative">
+      <p>There was a moment — not in a boardroom, not in a funding round — when the nature of the threat changed.</p>
+      <p style="margin-top:2mm">The proliferation had been building for years. Commercial drone technology had democratized a capability that, until recently, required military acquisition, specialized training, and sovereign authorization. Then: a $400 device became a viable weapon. A swarm of $400 devices became a threat that no nation-state air defense system had been designed to counter. The rules of aerial sovereignty — built over a century of conventional airpower doctrine — became inadequate overnight.</p>
+      <p style="margin-top:2mm">Precision Tek Inc. had been working in the margins of this problem — the places where standard defense procurement had not yet reached. The engineers and operators who built what became T.E.M.P.I.S.T. were not academics solving a theoretical challenge. They were responding to a real tactical problem, in real operational environments, before the defense establishment had even fully named the threat class.</p>
+      <p style="margin-top:2mm">When that answer was deployed — in Ukraine, in the world's most advanced live laboratory for drone warfare — and it worked, the company changed its name. Not because Precision Tek was inadequate. Because what they had built was something else entirely. Something that doesn't ask if you're ready. Something that arrives.</p>
+      <p style="margin-top:2mm"><strong>We are the weather.</strong></p>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>29 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 30 — THE ENEMY + WORLD WITHOUT/WITH
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">6.2 – 6.4 / THE ENEMY · WORLD WITHOUT · WORLD WITH</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ NARRATIVE FRAMES — 6.2 / 6.3 / 6.4 ]</div>
+    <div class="three-col">
+      <div>
+        <h3>6.2 The Enemy</h3>
+        <div class="narrative">
+          <p>The enemy is not a country. It is the gap — the gap between the speed at which threat technology proliferates and the speed at which sovereign defense capabilities can respond. The same logistics networks that deliver commercial goods have delivered drone swarm components to entities who were never the intended adversaries of the defense frameworks charged with stopping them. The gap is the enemy. Tempist is the closure.</p>
+        </div>
+      </div>
+      <div>
+        <h3>6.3 World Without Tempist</h3>
+        <div class="narrative">
+          <p>The proliferation continues. Every year, the barrier to deploying an aerial swarm decreases. A $400 drone can force the rerouting of a commercial flight, the evacuation of a critical infrastructure site, the exposure of a forward operating position. Sovereign governments lose ground to frameworks that were never designed for this threat. The gap grows every day Tempist is not deployed.</p>
+        </div>
+      </div>
+      <div>
+        <h3>6.4 World With Tempist</h3>
+        <div class="narrative">
+          <p>The world with Tempist is not a world without threat. It is a world where the threat meets its match before it reaches its target. An adversary calculating the feasibility of a drone-swarm attack is calculating against a system that does not tire, does not hesitate, and does not negotiate. Before Tempist. After Tempist. These are not the same threat environments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>30 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 31 — PROOF POINTS 01–05
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">6.5 / KEY PROOF POINTS — 01–05</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ KEY PROOF POINTS — 6.5 ]</div>
+    <h2 style="margin-bottom:3mm">What Makes the Claim Credible</h2>
+    <div style="display:flex;flex-direction:column;flex:1;justify-content:space-between">
+      <div class="proof-item"><div class="proof-num">[ 01 ]</div><div><div class="proof-title">Combat Deployment — Ukraine</div><div class="proof-body">T.E.M.P.I.S.T. operationally deployed in the Ukraine conflict theater — the world's most data-rich, highest-tempo environment for counter-UAV doctrine. Not a field test. Combat deployment.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 02 ]</div><div><div class="proof-title">$100M+ Sovereign Pipeline</div><div class="proof-body">Documented sovereign procurement pipeline in excess of $100M — representing identified, qualified interest from nation-state governments in formal procurement evaluation. Not speculative.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 03 ]</div><div><div class="proof-title">Autonomous Engagement — Zero Human Latency</div><div class="proof-body">Detection, classification, assignment, and intercept executed autonomously within engagement windows that human operators cannot access.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 04 ]</div><div><div class="proof-title">EMP Payload — Zero Kinetic Debris</div><div class="proof-body">EMP-based intercept eliminates kinetic debris risk endemic to projectile-based systems. In urban environments and airspace-constrained theaters, this is not a feature — it is a requirement.</div></div></div>
+      <div class="proof-item" style="border-bottom:none"><div class="proof-num">[ 05 ]</div><div><div class="proof-title">Manufacturing Joint Venture Architecture</div><div class="proof-body">In-country manufacturing JV capacity for qualifying sovereign partners — enabling local production compliance, technology transfer, and in-country economic engagement that accelerates procurement authorization.</div></div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>31 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 32 — PROOF POINTS 06–10
+════════════════════════════════════════════ -->
+<div class="slide">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">6.5 / KEY PROOF POINTS — 06–10</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="content">
+    <div class="slide-num">[ KEY PROOF POINTS — 6.5 CONTINUED ]</div>
+    <div style="display:flex;flex-direction:column;flex:1;justify-content:space-between">
+      <div class="proof-item"><div class="proof-num">[ 06 ]</div><div><div class="proof-title">ITAR Compliance Track</div><div class="proof-body">Export control architecture built into the procurement and deployment structure from the outset — not a post-design compliance retrofit. This is foundational architecture, not added compliance.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 07 ]</div><div><div class="proof-title">GAMI Pathway</div><div class="proof-body">Active General Authority for Military Industries compliance pathway enabling sovereign deployment within regulatory frameworks for key strategic markets.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 08 ]</div><div><div class="proof-title">Directed Energy Roadmap</div><div class="proof-body">T.E.M.P.I.S.T. is a platform, not a product. Current EMP interceptor swarm is capability tier one. Active directed energy development extends the platform into the next threat generation.</div></div></div>
+      <div class="proof-item"><div class="proof-num">[ 09 ]</div><div><div class="proof-title">Institutional Capital — Lockstep Ventures / Obsidian Capital Partners</div><div class="proof-body">Backed by investors at the intersection of defense strategy and long-duration capital — reflecting the infrastructure-scale positioning of T.E.M.P.I.S.T.</div></div></div>
+      <div class="proof-item" style="border-bottom:none"><div class="proof-num">[ 10 ]</div><div><div class="proof-title">Distributed AI — No Single Point of Failure</div><div class="proof-body">Swarm coordination on distributed AI architecture — no central command node to target or disable. Each interceptor carries sufficient autonomous intelligence to complete its intercept sequence even without network connectivity.</div></div></div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">We are the weather.</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>32 OF 36</span></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SLIDE 33 — BACK COVER
+════════════════════════════════════════════ -->
+<div class="slide slide-back">
+  <div class="top-bar">
+    <div class="top-bar-brand">TEMPIST SYSTEMS INC.</div>
+    <div class="top-bar-meta">END OF DOCUMENT</div>
+    <div class="top-bar-class">CONTROLLED</div>
+  </div>
+  <div class="cover-bg-accent"></div>
+  <div class="bracket-tl"></div>
+  <div class="bracket-br"></div>
+  <div class="content">
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14pt;letter-spacing:0.2em;text-transform:uppercase;color:var(--white);margin-bottom:2mm">TEMPIST SYSTEMS INC.</div>
+    <div class="cover-rule" style="width:60mm;margin:0 auto 3mm"></div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28pt;letter-spacing:0.1em;color:var(--white);margin-bottom:8mm">We are the weather.</div>
+    <div class="cover-stamp" style="margin-bottom:6mm">CONTROLLED DISTRIBUTION — AUTHORIZED PERSONNEL ONLY</div>
+    <div style="display:flex;flex-direction:column;gap:2mm;align-items:center">
+      <div class="mono" style="font-size:6.5pt">[ DOC: TSI-2026-BRAND-001 // VERSION: 1.0 // ISSUED: 2026 ]</div>
+      <div class="mono" style="font-size:6pt;color:var(--steel)">BACKED BY LOCKSTEP VENTURES / OBSIDIAN CAPITAL PARTNERS</div>
+      <div class="mono" style="font-size:6pt;color:var(--steel)">FORMERLY PRECISION TEK INC.</div>
+    </div>
+  </div>
+  <div class="bot-bar">
+    <div class="bot-bar-left">████ TEMPIST SYSTEMS INC. — CONTROLLED DISTRIBUTION ████</div>
+    <div class="bot-bar-right">TSI-2026-BRAND-001 // <span>33 OF 33</span></div>
+  </div>
+</div>
+
+</body>
+</html>
