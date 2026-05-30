@@ -224,6 +224,20 @@ p strong{color:var(--classified-white);font-weight:600}
 .motion-spec{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--classified-white);margin-bottom:0.5rem}
 .motion-desc{font-size:11px;color:rgba(232,228,220,0.5);line-height:1.6}
 
+/* LOGO ASSETS */
+.logo-asset-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin:2rem 0}
+.logo-asset-box{background:#0A0B0E;border:1px solid var(--border);padding:3rem 2rem;display:flex;flex-direction:column;align-items:center;gap:1.25rem;position:relative}
+.logo-asset-box::before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;border-top:1px solid var(--signal-green);border-left:1px solid var(--signal-green)}
+.logo-asset-box.light-bg{background:#E8E4DC}
+.logo-asset-box img{max-width:100%;height:auto;max-height:100px;object-fit:contain}
+.logo-asset-label{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--signal-green);text-align:center}
+.logo-asset-specs{font-family:'IBM Plex Mono',monospace;font-size:9px;color:rgba(74,85,104,0.85);text-align:center;line-height:2}
+.logo-gif-box{background:#0A0B0E;border:1px solid var(--border);padding:3rem;display:flex;flex-direction:column;align-items:center;gap:1.5rem;margin:2rem 0;position:relative}
+.logo-gif-box::before{content:'';position:absolute;top:0;left:0;width:20px;height:20px;border-top:1px solid var(--signal-green);border-left:1px solid var(--signal-green)}
+.logo-gif-box::after{content:'';position:absolute;bottom:0;right:0;width:20px;height:20px;border-bottom:1px solid var(--signal-green);border-right:1px solid var(--signal-green)}
+.logo-gif-box img{max-height:140px;width:auto}
+.logo-clearspace-note{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--steel-blue);letter-spacing:0.12em;border-top:1px solid var(--border);padding-top:1.25rem;width:100%;text-align:center;line-height:1.9}
+
 /* TOC */
 .toc{background:var(--surface);border:1px solid var(--border);padding:2rem;margin:4rem 0}
 .toc-title{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.25em;text-transform:uppercase;color:var(--signal-green);margin-bottom:1.5rem}
@@ -283,6 +297,7 @@ footer{background:var(--ops-bg);border-top:1px solid var(--border);padding:4rem 
   <div class="hero-meta">
     DOC: TSI-2026-BRAND-001 &nbsp;|&nbsp; CLASS: <span>CONTROLLED DISTRIBUTION</span> &nbsp;|&nbsp; VER: 1.0
   </div>
+  <img src="logo-animated.gif" alt="" aria-hidden="true" style="width:80px;height:80px;object-fit:contain;margin-bottom:1.25rem;opacity:0.92;filter:drop-shadow(0 0 12px rgba(0,255,65,0.25))">
   <div class="hero-wordmark">TEMPIST SYSTEMS INC.</div>
   <div class="hero-rule"></div>
   <div class="hero-tagline">Brand Identity &amp; Guidelines</div>
@@ -679,40 +694,48 @@ footer{background:var(--ops-bg);border-top:1px solid var(--border);padding:4rem 
     <div class="rule"></div>
     <h2>3.3 Logo System</h2>
 
-    <div class="logo-demo">
-      <div class="logo-tagline-demo" style="font-size:9px;letter-spacing:0.3em;margin-bottom:1.5rem;color:var(--steel-blue)">PRIMARY WORDMARK — SPACE GROTESK BOLD — TRACKING +22em</div>
-      <div class="logo-wordmark-demo">TEMPIST SYSTEMS INC.</div>
-      <div class="logo-rule-demo"></div>
-      <div class="logo-tagline-demo">We are the weather.</div>
+    <div class="logo-asset-grid">
+      <div class="logo-asset-box">
+        <div class="logo-asset-label">Horizontal Lockup — White — Dark Field</div>
+        <img src="logo-horizontal.png" alt="TEMPIST Systems horizontal logo">
+        <div class="logo-asset-specs">
+          Primary lockup · default usage<br>
+          Min width: 160px · Clearspace: 0.5× logo height on all sides
+        </div>
+      </div>
+      <div class="logo-asset-box">
+        <div class="logo-asset-label">Stacked Lockup — White — Dark Field</div>
+        <img src="logo-stacked.png" alt="TEMPIST Systems stacked logo">
+        <div class="logo-asset-specs">
+          Square &amp; portrait formats · social avatars · hardware marks<br>
+          Min width: 120px · Clearspace: 0.5× logo width on all sides
+        </div>
+      </div>
     </div>
 
-    <h3>Symbol Mark — Convergence Icon</h3>
-    <div class="logo-demo">
-      <div class="logo-tagline-demo" style="font-size:9px;letter-spacing:0.3em;margin-bottom:2rem;color:var(--steel-blue)">CONVERGENCE ICON — VECTOR BRIEF FOR DESIGNER</div>
-      <div class="symbol-demo">
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="5" stroke="#00FF41" stroke-width="1.2" fill="none" opacity="0.9"/>
-          <line x1="60" y1="12" x2="60" y2="50" stroke="url(#g1)" stroke-width="1"/>
-          <line x1="60" y1="108" x2="60" y2="70" stroke="url(#g2)" stroke-width="1"/>
-          <line x1="12" y1="60" x2="50" y2="60" stroke="url(#g3)" stroke-width="1"/>
-          <line x1="108" y1="60" x2="70" y2="60" stroke="url(#g4)" stroke-width="1"/>
-          <line x1="24" y1="24" x2="53" y2="53" stroke="url(#g5)" stroke-width="1"/>
-          <line x1="96" y1="96" x2="67" y2="67" stroke="url(#g6)" stroke-width="1"/>
-          <line x1="96" y1="24" x2="67" y2="53" stroke="url(#g7)" stroke-width="1"/>
-          <line x1="24" y1="96" x2="53" y2="67" stroke="url(#g8)" stroke-width="1"/>
-          <defs>
-            <linearGradient id="g1" x1="60" y1="12" x2="60" y2="50" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g2" x1="60" y1="108" x2="60" y2="70" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g3" x1="12" y1="60" x2="50" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g4" x1="108" y1="60" x2="70" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g5" x1="24" y1="24" x2="53" y2="53" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g6" x1="96" y1="96" x2="67" y2="67" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g7" x1="96" y1="24" x2="67" y2="53" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-            <linearGradient id="g8" x1="24" y1="96" x2="53" y2="67" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00FF41" stop-opacity="0.9"/><stop offset="1" stop-color="#00FF41" stop-opacity="0"/></linearGradient>
-          </defs>
-        </svg>
+    <h4 style="margin-top:2.5rem">Light-Field Reversal</h4>
+    <div class="logo-asset-grid">
+      <div class="logo-asset-box light-bg">
+        <div class="logo-asset-label" style="color:#4A5568">Horizontal — Ops Background — Light Field</div>
+        <img src="logo-horizontal.png" alt="TEMPIST Systems horizontal logo light field" style="filter:invert(1)">
+        <div class="logo-asset-specs" style="color:#4A5568">Government formal documents · classified white field only<br>No other color — never Signal Green on light field</div>
       </div>
-      <div style="margin-top:1rem;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--steel-blue);letter-spacing:0.15em;text-transform:uppercase">8 vectors converging toward center ring — each fading to 0% opacity before reaching it — variable lengths represent distributed interceptor travel distances</div>
+      <div class="logo-asset-box light-bg">
+        <div class="logo-asset-label" style="color:#4A5568">Stacked — Ops Background — Light Field</div>
+        <img src="logo-stacked.png" alt="TEMPIST Systems stacked logo light field" style="filter:invert(1)">
+        <div class="logo-asset-specs" style="color:#4A5568">Formal print · letterhead · official correspondence</div>
+      </div>
+    </div>
+
+    <h3>Symbol Mark — Animated Convergence Mark</h3>
+    <div class="logo-gif-box">
+      <div class="logo-asset-label">CONVERGENCE MARK — ANIMATED — DIGITAL CONTEXTS ONLY</div>
+      <img src="logo-animated.gif" alt="TEMPIST animated convergence mark">
+      <div class="logo-clearspace-note">
+        Approved: digital headers · video pre-roll · loading states · site hero<br>
+        Never loop more than 3× without user interaction · Never reproduce in print<br>
+        Min display size: 64×64px · Never place on any background other than Ops Background
+      </div>
     </div>
 
     <h3>Acronym Treatment</h3>
@@ -1117,7 +1140,7 @@ footer{background:var(--ops-bg);border-top:1px solid var(--border);padding:4rem 
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-wordmark">TEMPIST SYSTEMS INC.</div>
+  <img src="logo-stacked.png" alt="TEMPIST Systems" style="height:64px;width:auto;object-fit:contain;margin-bottom:1.5rem;opacity:0.9">
   <div class="footer-rule"></div>
   <div class="footer-tagline">We are the weather.</div>
   <div class="footer-meta">
