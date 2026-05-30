@@ -270,6 +270,36 @@ footer{background:var(--ops-bg);border-top:1px solid var(--border);padding:4rem 
 /* SECTION TRANSITION */
 .section{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
 .section.visible{opacity:1;transform:translateY(0)}
+
+/* PDF BUTTON */
+.pdf-btn{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--signal-green);background:transparent;border:1px solid rgba(0,255,65,0.35);padding:5px 14px;cursor:pointer;transition:background 0.15s,border-color 0.15s;white-space:nowrap}
+.pdf-btn:hover{background:rgba(0,255,65,0.08);border-color:var(--signal-green)}
+.pdf-btn:active{background:rgba(0,255,65,0.15)}
+.pdf-btn::before{content:'↓ '}
+
+/* PRINT / PDF STYLES */
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  nav,#progress,.grid-overlay,.pdf-btn,.hero-nav-hint{display:none!important}
+  body::before,body::after{display:none!important}
+  body{background:#0A0B0E;color:#E8E4DC;font-size:11px}
+  .hero{min-height:auto;padding:3rem 2rem 2rem;border-bottom:1px solid #1e2128}
+  .hero-bracket{display:none}
+  .section{opacity:1!important;transform:none!important;padding:3rem 2rem;page-break-before:auto}
+  .section+.section{border-top:1px solid #1e2128}
+  #chapter-1{page-break-before:always}
+  #chapter-2{page-break-before:always}
+  #chapter-3{page-break-before:always}
+  #chapter-4{page-break-before:always}
+  #chapter-5{page-break-before:always}
+  #chapter-6{page-break-before:always}
+  .card,.law,.personality,.copy-block,.logo-asset-box{page-break-inside:avoid}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .palette{grid-template-columns:repeat(3,1fr)}
+  .logo-asset-grid{grid-template-columns:repeat(2,1fr)}
+  footer{padding:2rem;page-break-before:avoid}
+  a{color:inherit;text-decoration:none}
+}
 </style>
 </head>
 <body>
@@ -287,7 +317,10 @@ footer{background:var(--ops-bg);border-top:1px solid var(--border);padding:4rem 
     <li><a href="#chapter-5">Governance</a></li>
     <li><a href="#chapter-6">Narrative</a></li>
   </ul>
-  <div class="nav-class">CONTROLLED</div>
+  <div style="display:flex;align-items:center;gap:1rem">
+    <button class="pdf-btn" onclick="window.print()">Download PDF</button>
+    <div class="nav-class">CONTROLLED</div>
+  </div>
 </nav>
 
 <!-- HERO -->
